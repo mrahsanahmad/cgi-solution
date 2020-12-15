@@ -36,11 +36,6 @@ using namespace cgicc;
                 std::cout << "Dont mess with me" << endl;
             }
 
-            form_iterator name = cgi.getElement("name");
-            if (name != cgi.getElements().end()) {
-                cout << "Your name: " << **name << endl;
-            }
-
             // Close the HTML document
             cout << body() << html();
         }
