@@ -101,10 +101,12 @@
       </Command>
     </CustomBuildStep>
     <PostBuildEvent>
-      <Command>ren $(SolutionDir)*.exe *.cgi</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>del $(SolutionDir)*.cgi</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
