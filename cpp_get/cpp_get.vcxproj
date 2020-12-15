@@ -144,7 +144,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cpp_get.cpp" />
+    <ClCompile Include="Credentials.cpp" />
     <ClCompile Include="helper.cpp" />
+    <ClCompile Include="LoginManager.cpp" />
+    <ClCompile Include="Module.cpp" />
+    <ClCompile Include="Queries.cpp" />
+    <ClCompile Include="TransactionLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Libraries\Libraries.vcxproj">
@@ -152,7 +157,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Credentials.h" />
+    <ClInclude Include="defines.h" />
     <ClInclude Include="helper.h" />
+    <ClInclude Include="ID.h" />
+    <ClInclude Include="LoginManager.h" />
+    <ClInclude Include="Module.h" />
+    <ClInclude Include="Queries.h" />
+    <ClInclude Include="TransactionLayer.h" />
+    <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
