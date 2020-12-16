@@ -7,7 +7,7 @@ namespace businessModels {
         unsigned int m_Id;
         std::string m_Name;
 
-        Module(const char* name);
+        Module(const char* name, unsigned int id);
     };
 }
 
