@@ -19,6 +19,8 @@ namespace businessModels {
 			INVALID};
 
 		virtual Type GetType() = 0;
+		
+		static const User MakeDummyUser();
 	};
 
 	class Admin : public User {
