@@ -30,7 +30,7 @@ namespace tl{
         /// </summary>
         /// <param name="student"></param>
         /// <returns></returns>
-        static const std::vector<businessModels::Module> GetModules(businessModels::Student& student);
+        static const std::vector<businessModels::Module> GetModules(unsigned int student);
 
         /// <summary>
         /// Lecturer can See Students
