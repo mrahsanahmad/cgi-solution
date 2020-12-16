@@ -1,12 +1,5 @@
 #include "TransactionLayer.h"
 
-#include "mysql_connection.h"
-
-#include <cppconn/driver.h>
-#include <cppconn/exception.h>
-#include <cppconn/resultset.h>
-#include <cppconn/statement.h>
-#include <cppconn/prepared_statement.h>
 
 namespace tl
 {
@@ -25,56 +18,56 @@ namespace tl
         throw 1;
     }
 
-    const std::vector<businessModels::Module> TransactionLayer::GetModules(businessModels::Student& student)
+    const std::vector<businessModels::Module> TransactionLayer::GetModules(ID student)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    const std::vector<businessModels::Student> TransactionLayer::GetAllStudents()
+    const std::vector<businessModels::User> TransactionLayer::GetAllStudents()
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    const std::vector<businessModels::Student> TransactionLayer::GetStudents(businessModels::Module& module)
+    const std::vector<businessModels::User> TransactionLayer::GetStudents(ID module)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    Marks TransactionLayer::ViewMarks(businessModels::Module& module, businessModels::Student& student)
+    Marks TransactionLayer::ViewMarks(businessModels::Module& module, ID student)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    const void TransactionLayer::ChangeMarks(businessModels::Module& module, businessModels::Student& student, Marks marks)
+    const void TransactionLayer::ChangeMarks(ID module, ID student, Marks marks)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    void TransactionLayer::AssignModule(businessModels::Module& module, businessModels::Student& student)
+    void TransactionLayer::AssignModule(ID module, ID student)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    void TransactionLayer::AssignModule(businessModels::Module& module, businessModels::Lecturer& lecturers)
+    void TransactionLayer::AssignModule(ID module, ID lecturers)
     {
         std::stringstream ss;
         //RunQuery(ss);
         throw 1;
     }
 
-    void TransactionLayer::RunQuery(const char* str)
+    void TransactionLayer::RunQuery(const std::stringstream& ss)
     {
         std::stringstream ss;
         //RunQuery(ss);

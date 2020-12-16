@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Users\Rabya Sheikh\Downloads\login-admin.cpp">
+    <ClCompile Include="login-admin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

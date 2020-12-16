@@ -11,6 +11,7 @@
 namespace tl{
     static class TransactionLayer
     {
+        using ID = unsigned int;
     public:
         /// <summary>
         /// Both Lecturers and Admins can login
@@ -30,20 +31,20 @@ namespace tl{
         /// </summary>
         /// <param name="student"></param>
         /// <returns></returns>
-        static const std::vector<businessModels::Module> GetModules(unsigned int student);
+        static const std::vector<businessModels::Module> GetModules(ID student);
 
         /// <summary>
         /// Lecturer can See Students
         /// </summary>
         /// <returns></returns>
-        static const std::vector<businessModels::Student> GetAllStudents();
+        static const std::vector<businessModels::User> GetAllStudents();
 
         /// <summary>
         /// Lecturer can see Students assigned to modules
         /// </summary>
         /// <param name="module"></param>
         /// <returns></returns>
-        static const std::vector<businessModels::Student> GetStudents(businessModels::Module& module);
+        static const std::vector<businessModels::User> GetStudents(ID module);
 
         /// <summary>
         /// Lecturer can view marks
@@ -51,7 +52,7 @@ namespace tl{
         /// <param name="module"></param>
         /// <param name="student"></param>
         /// <returns></returns>
-        static Marks ViewMarks(businessModels::Module& module, businessModels::Student& student);
+        static Marks ViewMarks(businessModels::Module& module, ID student);
 
         /// <summary>
         /// Lecturer can change marks
@@ -60,21 +61,21 @@ namespace tl{
         /// <param name="student"></param>
         /// <param name="marks"></param>
         /// <returns></returns>
-        static const void ChangeMarks(businessModels::Module& module, businessModels::Student& student, Marks marks);
+        static const void ChangeMarks(ID module, ID student, Marks marks);
 
         /// <summary>
         /// Admins can assign students to modules
         /// </summary>
         /// <param name="module"></param>
         /// <param name="student"></param>
-        static void AssignModule(businessModels::Module& module, businessModels::Student& student);
+        static void AssignModule(ID module, ID student);
 
         /// <summary>
         /// Admins can assign Lecturers to Modules
         /// </summary>
         /// <param name="module"></param>
         /// <param name="student"></param>
-        static void AssignModule(businessModels::Module& module, businessModels::Lecturer& lecturers);
+        static void AssignModule(ID module, ID lecturers);
 
     private:
         static class TableNames

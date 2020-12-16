@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Rabya Sheikh\GitClones\vcpkg\packages\cgicc_x86-windows\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\xampp\cgi-bin\cgi-solution;C:\Users\Rabya Sheikh\GitClones\vcpkg\packages\cgicc_x86-windows\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Rabya Sheikh\GitClones\vcpkg\packages\cgicc_x86-windows\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)</OutDir>
   </PropertyGroup>
@@ -154,7 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Users\Rabya Sheikh\Downloads\login-lect.cpp" />
+    <ProjectReference Include="..\cpp_get\cpp_get.vcxproj">
+      <Project>{7c794fea-843e-458f-833f-31120b24ae56}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="login-lect.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
